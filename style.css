@@ -48,6 +48,7 @@ form button {
     padding: .5em 1em;
     margin-left: 2em;
     cursor: pointer;
+    min-width: -moz-min-content;
     min-width: fit-content;
 }
 
@@ -63,8 +64,8 @@ tr {
 .nuoroda {
     text-decoration: none;
     color: inherit;
-    width: 100%;
     text-align: right;
+    display: inline;
 }
 
 .nuoroda:hover,
@@ -124,6 +125,7 @@ header img{
 .section {
     width: 80%;
     max-width: 1200px;
+    min-width: -moz-min-content;
     min-width: fit-content;
     margin: 0 auto;
     padding: 1em 0;
@@ -169,6 +171,7 @@ header img{
     margin: 1em 0;
     padding: 1em;
     text-align: left;
+    min-width: -moz-min-content;
     min-width: fit-content;
 }
 
@@ -257,6 +260,7 @@ tr:last-child td {
 @media (max-width: 950px) {
     .section {
         width: 95%;
+        min-width: -moz-min-content;
         min-width: 200px;
     }
 
@@ -281,6 +285,7 @@ tr:last-child td {
 /* Page Numbers */
 .page-numbers {
     margin: 1em auto;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -358,6 +363,7 @@ tr:last-child td {
     letter-spacing: .05em;
     font-size: .625rem;
     background: #fff;
+    width: -moz-fit-content;
     width: fit-content;
     margin: 0 2em -1em;
     padding: .3em;
@@ -373,6 +379,7 @@ tr:last-child td {
 }
 
 #country-select {
+    width: -moz-fit-content;
     width: fit-content;
     display: inline-block;
     align-self: flex-start;
@@ -389,6 +396,7 @@ tr:last-child td {
     margin-top: 1em;
     padding: .5em 1em;
     border-radius: 5px;
+    width: -moz-fit-content;
     width: fit-content;
     align-self: flex-end;
     transition: color 250ms, background 250ms;
@@ -415,4 +423,13 @@ tr:last-child td {
 
 .message p {
     margin: 0;
+}
+
+.align-right {
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+.align-right .line {
+    margin: 0 1em;
 }

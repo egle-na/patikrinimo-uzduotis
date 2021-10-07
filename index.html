@@ -1,0 +1,95 @@
+<html lang="lt">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Šalys | Teltonika</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <header>
+            <div class="section">
+                <a href="index.html"><img src="teltonika.png" alt=""></a>
+            </div>
+        </header>
+
+        <main class="section">
+            <div class="title-container container">
+                <h1>Šalys</h1>
+                <button class="btn add-item-btn shadow-box">&plus;</button>
+            </div>
+
+            <div class="container">
+                <div class="search-container container shadow-box">
+                    <input type="text" id="searchbar" aria-label="Search">
+                    <span class="btn search-btn"></span>
+                </div>
+
+                <input type="date" name="date" id="data-filter" aria-label="Data Filter" placeholder="Data Filter" class="shadow-box">
+
+            </div>
+
+            <div class="table-container shadow-box">
+                <div>
+                    <table class="countries">
+                        <tr class="table-label">
+                            <th>Pavadinimas</th>
+                            <th>Užimamas Plotas</th>
+                            <th>Gyventojų Skaičius</th>
+                            <th>Šalies Tel. Kodas</th>
+                            <th>Veiksmai</th>
+                        </tr>
+                    </table>
+                </div>
+
+
+            </div>
+            <div class="page-numbers container disabled">
+                <p><i class="fas fa-chevron-left"></i></p>
+                <ul id="page-list">
+                    <li class="current-page">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+                <p><i class="fas fa-chevron-right"></i></p>
+            </div>
+            <div class="container align-right"><a href="index.html" class="nuoroda">Visos Šalys</a><span class="line"></span><a href="cities.html" class="nuoroda">Visi Miestai</a></div>
+        </main>
+
+        <div class="create-new disabled">
+            <div class="create-new-card shadow-box">
+                <button class="create-new-close-btn btn">&times;</button>
+                <h2 id="card-title">Pridėti šalį</h2>
+
+                <form class="add-item-form" action="#" method="post">
+                    <label for="name">Pavadinimas</label>
+                    <input id="name" name="name" type="text" value="" required>
+                    <label for="area">Užimamas plotas</label>
+                    <input id="area" name="area" type="number" value="" required>
+                    <label for="population">Gyventojų skaičius</label>
+                    <input id="population" name="population" type="number" value="" required>
+                    <label for="calling-code">Šalies Tel. kodas</label>
+                    <input id="calling-code" name="calling_code" type="tel" value="" required>
+                    <input type="hidden" name="id" value="">
+                    <button type="submit" class="submit-btn shadow-box btn">Saugoti</button>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="message shadow-box disabled">
+            <p>Country added successfully</p>
+        </div>
+
+        <script>
+            const api = "https://akademija.teltonika.lt/api4/index.php/countries";
+            const title = "countries";
+        </script>
+        <script src="index.js"></script>
+    </body>
+</html>
